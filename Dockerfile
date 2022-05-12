@@ -7,11 +7,11 @@ RUN apt-get update && apt-get upgrade -y \
 
 FROM base as piaware
 
-ENV IP=192.168.188.151
-ENV PORT=30005
-ENV PORT2=30104
-ENV PORT3=30105
-ENV PORT4=30106
+ARG IP=192.168.188.151
+ARG PORT=30005
+ARG PORT2=30104
+ARG PORT3=30105
+ARG PORT4=30106
 
 RUN wget -O /etc/apt/sources.list.d/abcd567a.list https://abcd567a.github.io/rpi/abcd567a.list \
     && wget -O /etc/apt/trusted.gpg.d/abcd567a-key.gpg https://abcd567a.github.io/rpi/KEY2.gpg
