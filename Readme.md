@@ -11,5 +11,5 @@ arm64 based platforms](https://github.com/abcd567a/rpi) like the Raspberry Pi4.
 ## Build
 
 ```shell
-DOCKER_BUILDKIT=1 docker build --target piaware -t technomike/piaware-relay .
+DOCKER_BUILDKIT=1 docker build --target piaware -t technomike/piaware-relay --build-arg ADSB_HOST=[IP OF ADSBx PI] --build-arg FEEDER_ID=[ORIGINAL FEEDER ID] .
 ```
